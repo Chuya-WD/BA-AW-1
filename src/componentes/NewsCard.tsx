@@ -16,7 +16,7 @@ interface NewsCardProps {
 export default function NewsCard({ news, isFeatured = false }: NewsCardProps) {
   return (
     <div
-      className={`group relative overflow-hidden rounded-lg bg-gray-900 shadow-lg transition-all hover:scale-[1.01] ${
+      className={`group relative overflow-hidden rounded-none bg-gray-900 shadow-lg transition-all hover:scale-[1.01] ${
         isFeatured ? "h-full min-h-[400px]" : "h-64" // Altura dinámica
       }`}
     >

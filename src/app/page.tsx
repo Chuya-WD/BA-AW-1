@@ -14,31 +14,37 @@ export default function Home() {
       id: 1,
       title: "Gran Congreso Internacional ANEUPI 2025: Innovación Financiera",
       date: "Feb 2, 2026",
-      image: "https://images.unsplash.com/photo-1544531696-60c384e9c1c4?q=80&w=1000", // Conferencia
+      image: "/noticias/CongresoInternacional.png", // Conferencia
     },
     {
       id: 2,
-      title: "¡Cómo mejorar tus finanzas personales en 5 pasos!",
+      title: "¡Cómo mejorar tus finanzas personales!",
       date: "Ene 30, 2026",
-      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800", // Dinero/Ahorro
+      image: "/noticias/noticia1.png", // Dinero/Ahorro
     },
     {
       id: 3,
       title: "Crecimiento financiero sostenido para nuestros accionistas",
       date: "Ene 29, 2026",
-      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800", // Gráficos stock
+      image: "/noticias/noticia2.png", // Gráficos stock
     },
     {
       id: 4,
-      title: "Actualización de servicios: Nueva App Móvil disponible",
+      title: "Actualización de servicios",
       date: "Ene 27, 2026",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800", // Banca móvil
+      image: "/noticias/noticia3.png", //Actualización de servicios
     },
     {
       id: 5,
       title: "Revise nuestros nuevos convenios corporativos",
       date: "Ene 26, 2026",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800", // Apretón de manos
+      image: "/noticias/noticia4.png", // Apretón de manos
+    },
+    {
+      id: 6,
+      title: "¡Sea parte de nuestros accionistas!",
+      date: "Ene 26, 2026",
+      image: "/noticias/noticia5.png", // Apretón de manos
     },
   ];
   const [mainNews, ...secondaryNews] = newsData;
@@ -188,15 +194,15 @@ export default function Home() {
       {/* 1. SECCIÓN NOTICIAS */}
       <div className="bg-white dark:bg-[#0a0a0a] p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-[#002f5d] dark:text-white mb-8 border-l-4 border-[#002f5d] pl-4">
+          <h2 className="text-4xl font-extrabold text-[#002f5d] dark:text-white mb-8 border-0-0 border-[#002f5d] pl-4">
             Noticias ANEUPI
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
              <div className="lg:col-span-5 flex flex-col">
                 <NewsCard news={mainNews} isFeatured={true} />
              </div>
              <div className="lg:col-span-7">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
                   {secondaryNews.map((news) => (
                     <NewsCard key={news.id} news={news} />
                   ))}
