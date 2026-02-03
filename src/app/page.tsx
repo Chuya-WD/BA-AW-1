@@ -87,23 +87,23 @@ export default function Home() {
   const otherServicesData = [
     {
       title: "Universidad Leceni",
-      path: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></> // Libro
+      image: "/logos/Universidad_Leceni.png"
     },
     {
       title: "Red Social ANEUPI",
-      path: <><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></> // Red nodos
+      image: "/logos/Gatitoplis.png"
     },
     {
       title: "Constructora",
-      path: <><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8H7v8"/></> // Construcción
+      image: "/logos/Leceni_inmobiliaria.png"
     },
     {
       title: "Fundación Social",
-      path: <><path d="M19 14c1.49-1.28 3.6-2.34 4.5-2.74-3.57-.88-6.02-.92-6.5-.96a4 4 0 0 0-4.66-2.6 4.3 4.3 0 0 0-3.32 5.06A4.5 4.5 0 0 0 8 16c2.8 0 5-2.2 5-5v-1"/></> // Manos/Ayuda (Paloma)
+      image: "/logos/Fundacion_Internacional.png"
     },
     {
       title: "TV y Medios",
-      path: <><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></> // TV antigua
+      image: "/logos/ANEUPI_TV.png"
     },
   ];
 
@@ -111,14 +111,14 @@ export default function Home() {
   const contestsData = [
     {
       title: "Sea parte de nuestros Accionistas",
-      description: "Únete a nuestra comunidad y accede a oportunidades de inversión que permiten el crecimiento colectivo con alta rentabilidad.",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200", // Reunión ejecutiva
+      description: "¡Transforma tus finanzas con nosotros!",
+      image: "/logos/dineroAneupi.png", // Reunión ejecutiva
       link: "#"
     },
     {
       title: "Créditos para Emprendedores",
-      description: "Impulsamos tu negocio con las tasas más competitivas del mercado. ¡Solicítalo hoy mismo en nuestras agencias!",
-      image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1200", // Pago con tarjeta/negocio
+      description: "Aprende a gestionar tus finanzas con las mejores estrategias. No es solo ahorro, es crecimiento.",
+      image: "/logos/finanzasAneupi1.png", // Pago con tarjeta/negocio
       link: "#"
     }
   ];
@@ -236,7 +236,7 @@ export default function Home() {
               <OtherServiceCard 
                 key={index} 
                 title={service.title} 
-                iconPath={service.path}
+                image={service.image}
               />
             ))}
           </div>
@@ -247,7 +247,7 @@ export default function Home() {
       <div className="bg-white dark:bg-[#0a0a0a] py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-6 border-l-4 border-[#002f5d] pl-4">
-            Oportunidades
+            Finanzas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
              <ContestCard 
