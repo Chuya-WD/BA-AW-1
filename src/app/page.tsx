@@ -6,6 +6,7 @@ import ContestCard from "../componentes/ContestCard";
 import ProjectCard from "../componentes/ProjectCard";
 import SentenceButton from "../componentes/SentenceButton";
 import InterestLink from "../componentes/InterestLink";
+import TestimonialCard from "../componentes/TestimonialCard";
 
 export default function Home() {
   // 1. NOTICIAS (Actualizadas con temas de ANEUPI)
@@ -122,14 +123,14 @@ export default function Home() {
       link: "#"
     },
     {
-      title: "Créditos para Emprendedores",
-      description: "Aprende a gestionar tus finanzas con las mejores estrategias. No es solo ahorro, es crecimiento.",
+      title: "Aprende a gestionar tus finanzas con las mejores estrategias. No es solo ahorro, es crecimiento.",
+      description: "Finanzas",
       image: "/logos/finanzasAneupi1.png", // Pago con tarjeta/negocio
       link: "#"
     }
   ];
 
-  // 5. PROYECTOS (Valores Institucionales)
+  // 5. PROYECTOS (Valores Institucionales) también podría ser Lo que dicen nuestros
   const projectsData = [
     {
       title: "Transparencia Total",
@@ -146,6 +147,38 @@ export default function Home() {
     {
       title: "Innovación Digital",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600", // Tech
+    }
+  ];
+
+  // 6. TESTIMONIOS (Lo que dicen nuestros accionistas)
+  const testimonialsData = [
+    {
+      name: "Danny S. Mendoza",
+      role: "Accionista y Empresario",
+      location: "Guayaquil",
+      quote: "Como inversionista, siempre busco empresas con estabilidad y proyección de crecimiento.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600",
+    },
+    {
+      name: "Luis A. Heredia",
+      role: "Accionista y Cliente",
+      location: "Balsas",
+      quote: "No solo soy accionista de ANEUPI, sino también cliente, y puedo decir que la calidad de sus servicios es excepcional.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600",
+    },
+    {
+      name: "Joel W. Erraez",
+      role: "Accionista y Empresario",
+      location: "Cuenca",
+      quote: "ANEUPI ha demostrado una gestión impecable, incluso en tiempos de incertidumbre económica.",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600",
+    },
+    {
+      name: "Daniel S. Espinoza",
+      role: "Accionista e Inversionista",
+      location: "Susudel",
+      quote: "Su transparencia y crecimiento continuo han generado grandes beneficios para mi portafolio de inversiones.",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600",
     }
   ];
 
@@ -249,7 +282,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 4. CAMPAÑAS DESTACADAS (ANTES CONCURSOS) */}
+      {/* 4. CAMPAÑAS DESTACADAS (ANTES CONCURSOS)  ahora es finanzas*/}
       <div className="bg-white dark:bg-[#0a0a0a] py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-6 border-l-4 border-[#002f5d] pl-4">
@@ -257,6 +290,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
              <ContestCard 
+               title={contestsData[0].title}
                description={contestsData[0].description} 
                image={contestsData[0].image}
              />
@@ -289,6 +323,27 @@ export default function Home() {
             <div className="h-2 w-2 rounded-full bg-gray-400"></div>
             <div className="h-2 w-2 rounded-full bg-[#002f5d]"></div>
             <div className="h-2 w-2 rounded-full bg-gray-400"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* 6. TESTIMONIOS DE NUESTROS ACCIONISTAS */}
+      <div className="bg-white dark:bg-[#0a0a0a] py-12 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
+            Testimonios de Nuestros Accionistas
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {testimonialsData.map((testimonial, i) => (
+              <TestimonialCard 
+                key={i}
+                name={testimonial.name}
+                role={testimonial.role}
+                location={testimonial.location}
+                quote={testimonial.quote}
+                image={testimonial.image}
+              />
+            ))}
           </div>
         </div>
       </div>
