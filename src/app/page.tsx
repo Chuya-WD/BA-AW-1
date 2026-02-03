@@ -317,8 +317,8 @@ export default function Home() {
       {/* 6. TESTIMONIOS DE NUESTROS ACCIONISTAS */}
       <div className="bg-white dark:bg-[#0a0a0a] py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
-            Testimonios de Nuestros Accionistas
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
+          Testimonios de Nuestros Accionistas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonialsData.map((testimonial, i) => (
