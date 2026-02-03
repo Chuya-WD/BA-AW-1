@@ -24,8 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* AGREGADO: font-serif aquí para cambiar el tipo de letra global */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif`}
       >
         {children}
       </body>

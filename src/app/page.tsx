@@ -52,7 +52,7 @@ export default function Home() {
   // 2. SERVICIOS EN LÍNEA (Iconos Bancarios: Tarjetas, Usuarios, Maletines)
   const servicesData = [
     {
-      title: "Hágase Accionista",
+      title: "Accionista",
       path: <><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></> // Usuario con más (+)
     },
     {
@@ -60,32 +60,12 @@ export default function Home() {
       path: <><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></> // Maletín
     },
     {
-      title: "Solicitud de Créditos",
+      title: "Créditos",
       path: <><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></> // Tarjeta de crédito
     },
     {
-      title: "Prácticas Profesionales",
+      title: "Prácticas",
       path: <><path d="M22 10v6M2 10v6"/><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m22 7-10 5-10-5"/></> // Birrete graduación
-    },
-    {
-      title: "Cuenta de Ahorros",
-      path: <><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2.5 0-3.9-3.6-7-7-8Z"/><path d="M8 11h.01"/><path d="M16 11h.01"/></> // Chanchito alcancía
-    },
-    {
-      title: "Multicrédito Empresarial",
-      path: <><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8H7v8"/><line x1="9" y1="10" x2="9" y2="10"/><line x1="15" y1="10" x2="15" y2="10"/></> // Edificio/Empresa
-    },
-    {
-      title: "Banca Virtual 24/7",
-      path: <><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></> // Monitor
-    },
-    {
-      title: "Centro de Ayuda y Reclamos",
-      path: <><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></> // Teléfono
-    },
-    {
-      title: "Seguridad y Transparencia",
-      path: <><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></> // Candado
     },
   ];
 
@@ -189,19 +169,23 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-[#0a0a0a] pb-20">
+    <main className="min-h-screen bg-white pb-20 font-serif text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wide text-center">
       
       {/* 1. SECCIÓN NOTICIAS */}
-      <div className="bg-white dark:bg-[#0a0a0a] p-8 md:p-12">
+
+      <div className="bg-white p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-[#002f5d] dark:text-white mb-8 border-0-0 border-[#002f5d] pl-4">
+          {/* CAMBIO: Colores aplicados (#0c476b y #eab356) */}
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
             Noticias ANEUPI
           </h2>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
              <div className="lg:col-span-5 flex flex-col">
                 <NewsCard news={mainNews} isFeatured={true} />
              </div>
              <div className="lg:col-span-7">
+                {/* RESTAURADO: gap-3 */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
                   {secondaryNews.map((news) => (
                     <NewsCard key={news.id} news={news} />
@@ -213,11 +197,13 @@ export default function Home() {
       </div>
 
       {/* 2. SERVICIOS EN LÍNEA */}
-      <div className="bg-gray-100 dark:bg-[#111] p-8 md:p-12">
+      {/* RESTAURADO: p-8 md:p-12 */}
+      <div className="bg-white p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
             Nuestros Servicios
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {servicesData.map((service, index) => (
               <ServiceCard 
@@ -231,10 +217,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 3. MARCAS CORPORATIVAS (OTRO SERVICIOS) */}
-      <div className="bg-gray-100 dark:bg-[#111] px-8 pb-12 md:px-12">
+      {/* 3. MARCAS CORPORATIVAS */}
+
+      <div className="bg-white px-8 pb-12 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
             Marcas Corporativas
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -249,10 +236,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 4. CAMPAÑAS DESTACADAS (ANTES CONCURSOS) */}
-      <div className="bg-white dark:bg-[#0a0a0a] py-12">
+      {/* 4. FINANZAS (ANTES BANNERS) */}
+      <div className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-6 border-l-4 border-[#002f5d] pl-4">
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-6 border-l-4 border-[#eab356] pl-4 text-left">
             Finanzas
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
@@ -269,10 +256,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 5. VALORES INSTITUCIONALES (ANTES PROYECTOS) */}
-      <div className="bg-gray-50 dark:bg-[#111] py-12 px-4 md:px-8">
+      {/* 5. VALORES INSTITUCIONALES */}
+      <div className="bg-white py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
             ¿Por qué elegirnos?
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -284,19 +271,19 @@ export default function Home() {
               />
             ))}
           </div>
-           {/* Puntos del carrusel simulado */}
+           {/* Puntos del carrusel simulado con nuevos colores */}
            <div className="flex justify-center gap-2 mt-8">
-            <div className="h-2 w-2 rounded-full bg-gray-400"></div>
-            <div className="h-2 w-2 rounded-full bg-[#002f5d]"></div>
-            <div className="h-2 w-2 rounded-full bg-gray-400"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-300"></div>
+            <div className="h-2 w-2 rounded-full bg-[#0c476b]"></div>
+            <div className="h-2 w-2 rounded-full bg-[#eab356]"></div>
           </div>
         </div>
       </div>
 
-      {/* 6. ACCESOS RÁPIDOS (ANTES SENTENCIAS) */}
-      <div className="bg-gray-100 dark:bg-[#111] py-12 px-4 md:px-8">
+      {/* 6. ACCESOS RÁPIDOS */}
+      <div className="bg-white py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-8">
+          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
             Accesos Rápidos
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -308,8 +295,8 @@ export default function Home() {
       </div>
 
       {/* 7. LINKS DE INTERÉS */}
-      <div className="bg-gray-200/50 dark:bg-[#1a1a1a] py-12 px-4 md:px-8">
-        <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-10 text-left">
+      <div className="bg-white py-12 px-4 md:px-8">
+        <h2 className="text-3xl font-extrabold text-[#0c476b] mb-10 text-left">
           Enlaces de Interés
         </h2>
         <div className="max-w-7xl mx-auto">
