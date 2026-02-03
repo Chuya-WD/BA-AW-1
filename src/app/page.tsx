@@ -153,14 +153,33 @@ export default function Home() {
     "Denuncias y Reclamos",
   ];
 
-  // 7. LINKS DE INTERÉS (Entidades relacionadas y contacto)
+// 7. LINKS DE INTERÉS 
   const linksData = [
-    { title: "Superintendencia de Bancos", initials: "SB" },
-    { title: "Banco Central del Ecuador", initials: "BCE" },
-    { title: "Servicio de Rentas Internas", initials: "SRI" },
-    { title: "Facebook Oficial", initials: "FB" },
-    { title: "Instagram", initials: "IG" },
-    { title: "WhatsApp Atención", initials: "WA" },
+    { 
+      title: "Universidad LECENI", 
+      initials: "UL", 
+      imageSrc: "/logos/Universidad_Leceni.png"
+    },
+    { 
+      title: "Gatito Plis", 
+      initials: "BCE", 
+      imageSrc: "/logos/Gatitoplis.png" 
+    },
+    { 
+      title: "LECENI Constructura Inmobiliaria", 
+      initials: "SRI", 
+      imageSrc: "/logos/Leceni_inmobiliaria.png" 
+    },
+    { 
+      title: "ANEUPI Fundación Internacional", 
+      initials: "AFI", 
+      imageSrc: "/logos/Fundacion_Internacional.png" 
+    },
+    { 
+      title: "ANEUPI TV internacional", 
+      initials: "TV", 
+      imageSrc: "/logos/ANEUPI_TV.png" 
+    },
   ];
 
   return (
@@ -284,16 +303,17 @@ export default function Home() {
 
       {/* 7. LINKS DE INTERÉS */}
       <div className="bg-gray-200/50 dark:bg-[#1a1a1a] py-12 px-4 md:px-8">
+        <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-10 text-left">
+          Enlaces de Interés
+        </h2>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#002f5d] dark:text-white mb-10">
-            Enlaces de Interés
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full justify-items-center">
             {linksData.map((link, index) => (
               <InterestLink 
                 key={index}
                 title={link.title}
                 initials={link.initials}
+                imageSrc={link.imageSrc}
               />
             ))}
           </div>
