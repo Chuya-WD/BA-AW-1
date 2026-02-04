@@ -8,7 +8,7 @@ export default function ServiceCard({ title, href, iconPath }: ServiceCardProps)
   return (
     <a
       href={href}
-      className="group flex items-center gap-4 rounded-xl bg-white p-6 shadow-md border border-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
+      className="group flex items-center gap-4 rounded-xl bg-white p-6 min-h-[96px] md:min-h-[120px] blue-shadow border border-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
     >
       {/* Contenedor del ícono (Azul oscuro y contorno) */}
       <div className="flex-shrink-0 text-[#002f5d]">

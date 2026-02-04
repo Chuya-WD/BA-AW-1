@@ -11,7 +11,7 @@ export default function InterestLink({ title, imageSrc, initials, href = "#" }: 
   return (
     <a href={href} className="group flex flex-col items-center gap-3 w-full">
       {/* Contenedor del Logo (Caja blanca con sombra) */}
-      <div className="flex items-center justify-center w-24 h-24 bg-white rounded-2xl shadow-md border border-gray-100 transition-all group-hover:-translate-y-2 group-hover:shadow-lg">
+      <div className="flex items-center justify-center w-24 h-24 bg-white rounded-2xl shadow-md border border-gray-100 transition-all group-hover:scale-110 group-hover:shadow-lg">
         {imageSrc ? (
           <div className="relative w-16 h-16">
             <Image 

@@ -10,7 +10,7 @@ export default function ProjectCard({ title, image, href = "#" }: ProjectCardPro
   return (
     <div className="flex flex-col items-center">
       {/* Contenedor Imagen */}
-      <div className="relative w-full aspect-square overflow-hidden shadow-sm">
+      <div className="relative w-[85%] aspect-square overflow-hidden shadow-sm">
         <Image
           src={image}
           alt={title}
@@ -20,8 +20,8 @@ export default function ProjectCard({ title, image, href = "#" }: ProjectCardPro
       </div>
 
       {/* Botón Flotante (Píldora) */}
-      <div className="relative -mt-6 z-10 w-[90%] bg-white shadow-lg rounded-2xl py-3 px-4 text-center border border-gray-100">
-        <h4 className="text-xs md:text-sm font-bold text-[#0f2c4c] mb-1 line-clamp-2 min-h-[2.5em] flex items-center justify-center">
+      <div className="relative mt-4 w-[95%] bg-white shadow-lg rounded-2xl py-3 px-4 text-center border border-gray-100">
+        <h4 className="text-xs md:text-sm font-extrabold text-[#0f2c4c] mb-1 line-clamp-2 min-h-[2.5em] flex items-center justify-center">
           {title}
         </h4>
         <a 

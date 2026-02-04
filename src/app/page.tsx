@@ -68,9 +68,29 @@ export default function Home() {
       title: "Prácticas",
       path: <><path d="M22 10v6M2 10v6"/><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m22 7-10 5-10-5"/></>
     },
+    {
+      title: "Atención al Cliente",
+      path: <><path d="M21 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12 1.21.47 2.39 1.03 3.5a2 2 0 0 1-.45 2.11L10 11a16 16 0 0 0 6 6l1.67-1.6a2 2 0 0 1 2.11-.45c1.11.56 2.29.91 3.5 1.03A2 2 0 0 1 21 16.92z"/></>
+    },
+    {
+      title: "Consultas Judiciales",
+      path: <><circle cx="11" cy="11" r="6"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></>
+    },
+    {
+      title: "Registro de Actos",
+      path: <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h6"/></>
+    },
+    {
+      title: "Citas y Agendamiento",
+      path: <><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></>
+    },
+    {
+      title: "Normativa y Leyes",
+      path: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/></>
+    },
   ];
 
-  // 3. MARCAS CORPORATIVAS
+  // 3. Otros Servicios
   const otherServicesData = [
     { title: "Universidad Leceni", image: "/logos/Universidad_Leceni.png" },
     { title: "Red Social ANEUPI", image: "/logos/Gatitoplis.png" },
@@ -79,16 +99,16 @@ export default function Home() {
     { title: "TV y Medios", image: "/logos/ANEUPI_TV.png" },
   ];
 
-  // 4. BANNERS (Finanzas)
+  // 4. Sistemas de concursos
   const contestsData = [
     {
-      title: "Sea parte de nuestros Accionistas",
+      title: "",
       description: "¡Transforma tus finanzas con nosotros!",
       image: "/logos/dineroAneupi.png",
       link: "#"
     },
     {
-      title: "Créditos para Emprendedores",
+      title: "",
       description: "Aprende a gestionar tus finanzas con las mejores estrategias. No es solo ahorro, es crecimiento.",
       image: "/logos/finanzasAneupi1.png",
       link: "#"
@@ -155,36 +175,41 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-white pb-20 font-serif text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wide text-center">
+    <main className="min-h-screen bg-gray-200 pb-20 text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wide text-center">
       
       {/* 1. SECCIÓN NOTICIAS */}
-      <div className="bg-white p-8 md:p-12">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            Noticias ANEUPI
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Noticias
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
-             <div className="lg:col-span-5 flex flex-col">
+             <div className="lg:col-span-6 flex flex-col">
                 <NewsCard news={mainNews} isFeatured={true} />
              </div>
-             <div className="lg:col-span-7">
+             <div className="lg:col-span-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
-                  {secondaryNews.map((news) => (
+                  {secondaryNews.slice(0, 4).map((news) => (
                     <NewsCard key={news.id} news={news} />
                   ))}
                 </div>
              </div>
           </div>
+          <div className="mt-6 flex justify-end">
+            <a href="#" className="inline-block bg-[#0c476b] text-white px-6 py-2 rounded-md text-sm md:text-base">
+              Todas las noticias
+            </a>
+          </div>
         </div>
       </div>
 
       {/* 2. SERVICIOS EN LÍNEA */}
-      <div className="bg-white p-8 md:p-12">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            Nuestros Servicios
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Servicios en linea
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {servicesData.map((service, index) => (
@@ -196,15 +221,20 @@ export default function Home() {
               />
             ))}
           </div>
+          <div className="mt-6 flex justify-end">
+            <a href="#" className="inline-block bg-[#0c476b] text-white px-6 py-2 rounded-md text-sm md:text-base">
+              Todos los servicios en linea
+            </a>
+          </div>
         </div>
       </div>
 
       {/* 3. MARCAS CORPORATIVAS */}
-      <div className="bg-white px-8 pb-12 md:px-12">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            Marcas Corporativas
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Otros servicios
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {otherServicesData.map((service, index) => (
@@ -219,13 +249,13 @@ export default function Home() {
       </div>
 
       {/* 4. FINANZAS */}
-      <div className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            Finanzas
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Sistema de Concursos
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+          <div className="contest-section" style={{ display: 'grid', gridTemplateColumns: '60% 40%', gap: '4px' }}>
              <ContestCard 
                title={contestsData[0].title}
                description={contestsData[0].description} 
@@ -241,11 +271,11 @@ export default function Home() {
       </div>
 
       {/* 5. VALORES INSTITUCIONALES */}
-      <div className="bg-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
            {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            ¿Por qué elegirnos?
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Proyectos Institucionales
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {projectsData.map((proj, i) => (
@@ -265,33 +295,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 6. TESTIMONIOS */}
-      <div className="bg-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#0c476b] mb-8 text-left">
-          Testimonios de Nuestros Accionistas
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {testimonialsData.map((testimonial, i) => (
-              <TestimonialCard 
-                key={i}
-                name={testimonial.name}
-                role={testimonial.role}
-                location={testimonial.location}
-                quote={testimonial.quote}
-                image={testimonial.image}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
+      
       {/* 7. ACCESOS RÁPIDOS */}
-      <div className="bg-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
            {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
-            Accesos Rápidos
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+            Cumplimiento de Sentencias
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sentenciasData.map((texto, index) => (
@@ -302,10 +312,10 @@ export default function Home() {
       </div>
 
       {/* 8. LINKS DE INTERÉS */}
-      <div className="bg-white py-12 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
+        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
            {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 border-l-4 border-[#eab356] pl-4 text-left">
+          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Enlaces de Interés
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full justify-items-center">
