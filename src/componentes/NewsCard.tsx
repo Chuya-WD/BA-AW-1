@@ -36,8 +36,8 @@ export default function NewsCard({ news, isFeatured = false }: NewsCardProps) {
       {/* Contenido del texto */}
       <div className="absolute inset-0 left-0 p-6 w-full flex flex-col justify-end">
         <h3
-          className={`font-bold leading-tight text-white mb-3 ${
-            isFeatured ? "text-2xl md:text-3xl" : "text-base md:text-lg"
+          className={`font-bold leading-tight text-white mb-3 text-left ${
+            isFeatured ? "text-2xl" : "text-sm md:text-base"
           }`}
         >
           {news.title}

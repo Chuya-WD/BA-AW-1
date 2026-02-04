@@ -4,6 +4,7 @@ import ServiceCard from "../componentes/ServiceCard";
 import OtherServiceCard from "../componentes/OtherServiceCard";
 import ContestCard from "../componentes/ContestCard";
 import ProjectCard from "../componentes/ProjectCard";
+import ProjectCarousel from "../componentes/ProjectCarousel";
 import SentenceButton from "../componentes/SentenceButton";
 import InterestLink from "../componentes/InterestLink";
 import TestimonialCard from "../componentes/TestimonialCard";
@@ -120,7 +121,11 @@ export default function Home() {
     { title: "Transparencia Total", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600" },
     { title: "Sostenibilidad", image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600" },
     { title: "Educación Financiera", image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600" },
-    { title: "Innovación Digital", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" }
+    { title: "Innovación Digital", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" },
+    { title: "Inclusión Financiera", image: "https://images.unsplash.com/photo-1553729779-ede193e69d60?q=80&w=600" },
+    { title: "Seguridad Cibernética", image: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8094e?q=80&w=600" },
+    { title: "Responsabilidad Social", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" },
+    { title: "Transformación Ágil", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" }
   ];
 
   // 6. TESTIMONIOS
@@ -211,7 +216,7 @@ export default function Home() {
           <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Servicios en linea
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {servicesData.map((service, index) => (
               <ServiceCard 
                 key={index} 
@@ -277,21 +282,7 @@ export default function Home() {
           <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Proyectos Institucionales
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {projectsData.map((proj, i) => (
-              <ProjectCard 
-                key={i}
-                title={proj.title}
-                image={proj.image}
-              />
-            ))}
-          </div>
-           {/* Puntos del carrusel */}
-           <div className="flex justify-center gap-2 mt-8">
-            <div className="h-2 w-2 rounded-full bg-gray-300"></div>
-            <div className="h-2 w-2 rounded-full bg-[#0c476b]"></div>
-            <div className="h-2 w-2 rounded-full bg-[#eab356]"></div>
-          </div>
+          <ProjectCarousel projects={projectsData} />
         </div>
       </div>
 

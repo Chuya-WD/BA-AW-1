@@ -10,10 +10,10 @@ interface InterestLinkProps {
 export default function InterestLink({ title, imageSrc, initials, href = "#" }: InterestLinkProps) {
   return (
     <a href={href} className="group flex flex-col items-center gap-3 w-full">
-      {/* Contenedor del Logo (Caja blanca con sombra) */}
-      <div className="flex items-center justify-center w-24 h-24 bg-white rounded-2xl shadow-md border border-gray-100 transition-all group-hover:scale-110 group-hover:shadow-lg">
+      {/* Contenedor del Logo (Caja blanca con sombra azul) */}
+      <div className="flex items-center justify-center w-20 h-20 bg-white rounded-2xl blue-shadow transition-transform group-hover:scale-110">
         {imageSrc ? (
-          <div className="relative w-16 h-16">
+          <div className="relative w-14 h-14">
             <Image 
               src={imageSrc} 
               alt={title} 
@@ -29,8 +29,8 @@ export default function InterestLink({ title, imageSrc, initials, href = "#" }: 
         )}
       </div>
 
-      {/* Título del link */}
-      <span className="text-xs md:text-sm font-bold text-gray-600 text-center underline decoration-gray-300 underline-offset-4 group-hover:text-[#0f2c4c] group-hover:decoration-[#0f2c4c] transition-colors max-w-[120px]">
+      {/* Título del link (estático, sin hover de color) */}
+      <span className="text-xs md:text-sm font-semibold text-gray-600 text-center max-w-[120px]">
         {title}
       </span>
     </a>
