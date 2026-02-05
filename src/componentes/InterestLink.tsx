@@ -30,7 +30,7 @@ export default function InterestLink({ title, imageSrc, initials, href = "#" }: 
       </div>
 
       {/* Título del link (estático, sin hover de color) */}
-      <span className="text-xs md:text-sm font-semibold text-gray-600 text-center max-w-[120px]">
+      <span className="text-xs md:text-sm font-semibold text-gray-600 text-center max-w-[120px] underline">
         {title}
       </span>
     </a>
