@@ -1,3 +1,9 @@
+/**
+ * @file globals.css
+ * @description Estilos globales de la aplicación utilizando Tailwind CSS.
+ * Define variables de color, fuentes y utilidades personalizadas (como efectos 3D).
+ */
+
 @import "tailwindcss";
 
 :root {
@@ -61,20 +67,7 @@ body {
   box-shadow: 0 6px 16px rgba(12, 71, 107, 0.08), 0 -6px 16px rgba(12, 71, 107, 0.06), 6px 0 12px rgba(12, 71, 107, 0.05), -6px 0 12px rgba(12, 71, 107, 0.05);
 }
 
-/* Contest section hover: scale both images when hovering the section; remove individual hover zoom */
-.contest-image {
-  transform: translateZ(0);
-  transition: transform 0.7s cubic-bezier(.2, .8, .2, 1);
-}
 
-.contest-section:hover .contest-image {
-  transform: scale(1.08);
-}
-
-/* Apply image scaling when any card inside the section is hovered (uses :has for broader support) */
-.contest-section:has(.contest-card:hover) .contest-image {
-  transform: scale(1.08);
-}
 
 /* Section titles bold by default */
 h1,
@@ -91,7 +84,7 @@ h2 {
   font-family: var(--font-bitter), serif;
   /* Usar Bitter para títulos */
   font-weight: 800;
-  color: rgb(12, 71, 107);
+  color: rgb(37, 70, 106);
   /* Color solicitado */
   font-size: 28px;
   line-height: 39px;

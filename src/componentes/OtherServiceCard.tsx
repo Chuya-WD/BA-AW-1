@@ -1,8 +1,18 @@
+/**
+ * @file OtherServiceCard.tsx
+ * @description Tarjeta giratoria (Flip Card) para "Otros Servicios".
+ * Muestra un ícono y título en el frente, y un botón de acción en el reverso.
+ */
+
 interface OtherServiceCardProps {
   title: string;
   href?: string;
 }
 
+/**
+ * Selecciona un ícono SVG basado en el título del servicio.
+ * @param title Título del servicio
+ */
 function pickIcon(title: string) {
   const t = title.toLowerCase();
   if (t.includes("universidad") || t.includes("educa")) {
@@ -42,7 +52,7 @@ export default function OtherServiceCard({ title, href = "#" }: OtherServiceCard
   return (
     <a href={href} className="group block perspective">
       <div className="flip-card-inner relative w-full h-[245px] md:h-[258px] lg:h-[286px]">
-        <div className="flip-card-front absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6">
+        <div className="flip-card-front absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6 rounded-3xl">
           <div className="mb-4">
             {pickIcon(title)}
           </div>
@@ -50,9 +60,9 @@ export default function OtherServiceCard({ title, href = "#" }: OtherServiceCard
             {title}
           </span>
         </div>
-        <div className="flip-card-back absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6">
+        <div className="flip-card-back absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6 rounded-3xl">
           <p className="text-center underline decoration-[#3b82f6]">{title}</p>
-          <button className="border border-white text-white px-6 py-2 mt-6">Ver más</button>
+          <button className="border border-white text-white px-6 py-2 mt-6 rounded-lg">Ver más</button>
         </div>
       </div>
     </a>

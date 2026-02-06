@@ -1,3 +1,9 @@
+/**
+ * @file SentenceButton.tsx
+ * @description Botón de "Canales de Servicio".
+ * Diseño estilo píldora/bloque con fondo azul y efectos de hover.
+ */
+
 interface SentenceButtonProps {
   text: string;
   href?: string;

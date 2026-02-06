@@ -1,3 +1,9 @@
+/**
+ * @file ServiceCard.tsx
+ * @description Tarjeta de servicio enlacedo (Services Links).
+ * Muestra un título y un ícono SVG, con efectos de hover y sombra personalizada.
+ */
+
 interface ServiceCardProps {
   title: string;
   href: string;
@@ -8,7 +14,7 @@ export default function ServiceCard({ title, href, iconPath }: ServiceCardProps)
   return (
     <a
       href={href}
-      className="group flex items-center gap-3 rounded-xl bg-white p-5 min-h-[145px] md:min-h-[165px] border border-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
+      className="group flex items-center gap-3 rounded-3xl bg-white p-5 min-h-[145px] md:min-h-[165px] border border-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
       style={{
         boxShadow: '0 6px 16px rgba(12, 71, 107, 0.25), 0 -3px 10px rgba(12, 71, 107, 0.15)'
       }}

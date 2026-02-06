@@ -1,8 +1,16 @@
+/**
+ * @file page.tsx
+ * @description Página principal (Home) de Banco ANEUPI.
+ * Contiene múltiples secciones: Header, Noticias, Servicios, Proyectos, Testimonios, etc.
+ *
+ * @note Los datos se encuentran actualmente hardcodeados en arrays dentro del componente (`newsData`, `servicesData`, etc.).
+ * En un futuro, estos datos podrían venir de una API o CMS.
+ */
+
 import Image from "next/image";
 import NewsCard from "../componentes/NewsCard";
 import ServiceCard from "../componentes/ServiceCard";
 import OtherServiceCard from "../componentes/OtherServiceCard";
-import ContestCard from "../componentes/ContestCard";
 import ProjectCard from "../componentes/ProjectCard";
 import ProjectCarousel from "../componentes/ProjectCarousel";
 import SentenceButton from "../componentes/SentenceButton";
@@ -10,7 +18,7 @@ import InterestLink from "../componentes/InterestLink";
 import TestimonialCard from "../componentes/TestimonialCard";
 
 export default function Home() {
-  // 1. NOTICIAS
+  // --- 1. DATOS: NOTICIAS ---
   const newsData = [
     {
       id: 1,
@@ -58,7 +66,7 @@ export default function Home() {
       path: <><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></>
     },
     {
-      title: "Empleos y Vacantes",
+      title: "Aportaciones",
       path: <><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></>
     },
     {
@@ -66,7 +74,7 @@ export default function Home() {
       path: <><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></>
     },
     {
-      title: "Prácticas",
+      title: "Balances Financieros",
       path: <><path d="M22 10v6M2 10v6" /><path d="M12 2 2 7l10 5 10-5-10-5z" /><path d="m22 7-10 5-10-5" /></>
     },
     {
@@ -74,11 +82,11 @@ export default function Home() {
       path: <><path d="M21 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12 1.21.47 2.39 1.03 3.5a2 2 0 0 1-.45 2.11L10 11a16 16 0 0 0 6 6l1.67-1.6a2 2 0 0 1 2.11-.45c1.11.56 2.29.91 3.5 1.03A2 2 0 0 1 21 16.92z" /></>
     },
     {
-      title: "Consultas Judiciales",
+      title: "Paina",
       path: <><circle cx="11" cy="11" r="6" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>
     },
     {
-      title: "Registro de Actos",
+      title: "Paquete financiero",
       path: <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 7h6" /></>
     },
     {
@@ -101,20 +109,7 @@ export default function Home() {
   ];
 
   // 4. Sistemas de concursos
-  const contestsData = [
-    {
-      title: "",
-      description: "¡Transforma tus finanzas con nosotros!",
-      image: "/logos/dineroAneupi.png",
-      link: "#"
-    },
-    {
-      title: "",
-      description: "Aprende a gestionar tus finanzas con las mejores estrategias. No es solo ahorro, es crecimiento.",
-      image: "/logos/finanzasAneupi1.png",
-      link: "#"
-    }
-  ];
+
 
   // 5. PROYECTOS
   const projectsData = [
@@ -204,7 +199,7 @@ export default function Home() {
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
             Noticias
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
@@ -231,7 +226,7 @@ export default function Home() {
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
             Servicios en linea
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -256,7 +251,7 @@ export default function Home() {
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
             Otros servicios
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -264,40 +259,19 @@ export default function Home() {
               <OtherServiceCard
                 key={index}
                 title={service.title}
-                image={service.image}
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* 4. FINANZAS */}
-      <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
-        <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
-          {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
-            Sistema de Concursos
-          </h2>
-          <div className="contest-section" style={{ display: 'grid', gridTemplateColumns: '60% 40%', gap: '4px' }}>
-            <ContestCard
-              title={contestsData[0].title}
-              description={contestsData[0].description}
-              image={contestsData[0].image}
-            />
-            <ContestCard
-              title={contestsData[1].title}
-              description={contestsData[1].description}
-              image={contestsData[1].image}
-            />
-          </div>
-        </div>
-      </div>
+
 
       {/* 5. VALORES INSTITUCIONALES */}
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
             Proyectos Institucionales
           </h2>
           <ProjectCarousel projects={projectsData} />
@@ -309,8 +283,8 @@ export default function Home() {
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
-            Cumplimiento de Sentencias
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
+            Canales de Servicio
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sentenciasData.map((texto, index) => (
@@ -324,7 +298,7 @@ export default function Home() {
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
           {/* H2 ESTANDARIZADO */}
-          <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
+          <h2 className="text-4xl font-extrabold mb-8 text-left">
             Enlaces de Interés
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full justify-items-center">

@@ -1,6 +1,12 @@
+/**
+ * @file ProjectCarousel.tsx
+ * @description Carrusel de proyectos institucionales con desplazamiento táctil y de mouse.
+ * Utiliza lógica personalizada para el drag-and-drop y paginación.
+ */
+
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import ProjectCard from './ProjectCard';
 
 interface ProjectItem {
@@ -133,11 +139,10 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`h-2 rounded-full transition-all ${
-              i === currentIndex
-                ? 'bg-[#0c476b] w-8'
-                : 'bg-gray-300 w-2'
-            }`}
+            className={`h-2 rounded-full transition-all ${i === currentIndex
+              ? 'bg-[#0c476b] w-8'
+              : 'bg-gray-300 w-2'
+              }`}
             aria-label={`Ir a página ${i + 1}`}
           />
         ))}

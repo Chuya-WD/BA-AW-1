@@ -1,3 +1,9 @@
+/**
+ * @file TestimonialCard.tsx
+ * @description Tarjeta de testimonio con efecto 3D flip.
+ * Muestra el perfil del usuario en el frente y la cita en el reverso.
+ */
+
 import Image from "next/image";
 import React from "react";
 
