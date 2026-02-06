@@ -8,7 +8,7 @@ import Image from "next/image";
 
 interface InterestLinkProps {
   title: string;
-  imageSrc?: string; // Opcional por si no tienes logo aún
+  imageSrc?: string; // Opcional por si no hay logo aún
   initials?: string; // Para mostrar letras si no hay logo
   href?: string;
 }
