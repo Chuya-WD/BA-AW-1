@@ -55,39 +55,39 @@ export default function Home() {
   const servicesData = [
     {
       title: "Accionista",
-      path: <><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></>
+      path: <><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></>
     },
     {
       title: "Empleos y Vacantes",
-      path: <><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></>
+      path: <><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></>
     },
     {
       title: "Créditos",
-      path: <><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></>
+      path: <><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></>
     },
     {
       title: "Prácticas",
-      path: <><path d="M22 10v6M2 10v6"/><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m22 7-10 5-10-5"/></>
+      path: <><path d="M22 10v6M2 10v6" /><path d="M12 2 2 7l10 5 10-5-10-5z" /><path d="m22 7-10 5-10-5" /></>
     },
     {
       title: "Atención al Cliente",
-      path: <><path d="M21 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12 1.21.47 2.39 1.03 3.5a2 2 0 0 1-.45 2.11L10 11a16 16 0 0 0 6 6l1.67-1.6a2 2 0 0 1 2.11-.45c1.11.56 2.29.91 3.5 1.03A2 2 0 0 1 21 16.92z"/></>
+      path: <><path d="M21 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12 1.21.47 2.39 1.03 3.5a2 2 0 0 1-.45 2.11L10 11a16 16 0 0 0 6 6l1.67-1.6a2 2 0 0 1 2.11-.45c1.11.56 2.29.91 3.5 1.03A2 2 0 0 1 21 16.92z" /></>
     },
     {
       title: "Consultas Judiciales",
-      path: <><circle cx="11" cy="11" r="6"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></>
+      path: <><circle cx="11" cy="11" r="6" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>
     },
     {
       title: "Registro de Actos",
-      path: <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h6"/></>
+      path: <><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 7h6" /></>
     },
     {
       title: "Citas y Agendamiento",
-      path: <><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></>
+      path: <><rect x="3" y="5" width="18" height="16" rx="2" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="16" y1="3" x2="16" y2="7" /></>
     },
     {
       title: "Normativa y Leyes",
-      path: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/></>
+      path: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z" /></>
     },
   ];
 
@@ -180,8 +180,26 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-200 pb-20 text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wide text-center">
-      
+    <main className="min-h-screen bg-white pb-20 text-xs sm:text-sm md:text-base lg:text-lg font-semibold tracking-wide text-center">
+
+      {/* 0. SECCIÓN HEADER GESTIÓN */}
+      <div className="w-full relative h-[240px] md:h-[320px] lg:h-[400px]">
+        <Image
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" // Imagen de negocios/edificios alta calidad
+          alt="Gestión 2026"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <a
+          href="#"
+          className="absolute bottom-4 right-6 text-white font-bold text-shadow-md text-base md:text-xl lg:text-2xl flex items-center gap-2 hover:underline"
+          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}
+        >
+          #Gestión2026 👇
+        </a>
+      </div>
+
       {/* 1. SECCIÓN NOTICIAS */}
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
@@ -190,16 +208,16 @@ export default function Home() {
             Noticias
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
-             <div className="lg:col-span-6 flex flex-col">
-                <NewsCard news={mainNews} isFeatured={true} />
-             </div>
-             <div className="lg:col-span-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
-                  {secondaryNews.slice(0, 4).map((news) => (
-                    <NewsCard key={news.id} news={news} />
-                  ))}
-                </div>
-             </div>
+            <div className="lg:col-span-6 flex flex-col">
+              <NewsCard news={mainNews} isFeatured={true} />
+            </div>
+            <div className="lg:col-span-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 h-full">
+                {secondaryNews.slice(0, 4).map((news) => (
+                  <NewsCard key={news.id} news={news} />
+                ))}
+              </div>
+            </div>
           </div>
           <div className="mt-6 flex justify-end">
             <a href="#" className="inline-block bg-[#0c476b] text-white px-6 py-2 rounded-md text-sm md:text-base">
@@ -218,9 +236,9 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {servicesData.map((service, index) => (
-              <ServiceCard 
-                key={index} 
-                title={service.title} 
+              <ServiceCard
+                key={index}
+                title={service.title}
                 href="#"
                 iconPath={service.path}
               />
@@ -243,9 +261,9 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {otherServicesData.map((service, index) => (
-              <OtherServiceCard 
-                key={index} 
-                title={service.title} 
+              <OtherServiceCard
+                key={index}
+                title={service.title}
                 image={service.image}
               />
             ))}
@@ -261,16 +279,16 @@ export default function Home() {
             Sistema de Concursos
           </h2>
           <div className="contest-section" style={{ display: 'grid', gridTemplateColumns: '60% 40%', gap: '4px' }}>
-             <ContestCard 
-               title={contestsData[0].title}
-               description={contestsData[0].description} 
-               image={contestsData[0].image}
-             />
-             <ContestCard 
-               title={contestsData[1].title}
-               description={contestsData[1].description} 
-               image={contestsData[1].image}
-             />
+            <ContestCard
+              title={contestsData[0].title}
+              description={contestsData[0].description}
+              image={contestsData[0].image}
+            />
+            <ContestCard
+              title={contestsData[1].title}
+              description={contestsData[1].description}
+              image={contestsData[1].image}
+            />
           </div>
         </div>
       </div>
@@ -278,7 +296,7 @@ export default function Home() {
       {/* 5. VALORES INSTITUCIONALES */}
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
-           {/* H2 ESTANDARIZADO */}
+          {/* H2 ESTANDARIZADO */}
           <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Proyectos Institucionales
           </h2>
@@ -286,11 +304,11 @@ export default function Home() {
         </div>
       </div>
 
-      
+
       {/* 7. ACCESOS RÁPIDOS */}
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
-           {/* H2 ESTANDARIZADO */}
+          {/* H2 ESTANDARIZADO */}
           <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Cumplimiento de Sentencias
           </h2>
@@ -305,13 +323,13 @@ export default function Home() {
       {/* 8. LINKS DE INTERÉS */}
       <div className="py-6 md:py-8 lg:py-10 px-10 md:px-20 lg:px-28">
         <div className="max-w-7xl mx-auto p-0 md:p-0 lg:p-0">
-           {/* H2 ESTANDARIZADO */}
+          {/* H2 ESTANDARIZADO */}
           <h2 className="text-4xl font-extrabold text-[#0c476b] mb-8 text-left">
             Enlaces de Interés
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full justify-items-center">
             {linksData.map((link, index) => (
-              <InterestLink 
+              <InterestLink
                 key={index}
                 title={link.title}
                 initials={link.initials}

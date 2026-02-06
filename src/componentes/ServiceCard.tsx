@@ -10,7 +10,7 @@ export default function ServiceCard({ title, href, iconPath }: ServiceCardProps)
       href={href}
       className="group flex items-center gap-3 rounded-xl bg-white p-5 min-h-[145px] md:min-h-[165px] border border-gray-100 transition-all hover:shadow-lg hover:-translate-y-1 hover:border-gray-200"
       style={{
-        boxShadow: '0 6px 16px rgba(15, 44, 76, 0.25), 0 -3px 10px rgba(15, 44, 76, 0.15)'
+        boxShadow: '0 6px 16px rgba(12, 71, 107, 0.25), 0 -3px 10px rgba(12, 71, 107, 0.15)'
       }}
     >
       {/* Contenedor del ícono (Azul oscuro y contorno) */}

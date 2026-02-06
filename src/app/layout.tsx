@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Bitter } from "next/font/google"; // 1. Custom Font
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const bitter = Bitter({ // 2. Configure Bitter
+  variable: "--font-bitter",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased`}
+        className={`${bitter.variable} antialiased`} // 3. Use variable
       >
         {children}
       </body>

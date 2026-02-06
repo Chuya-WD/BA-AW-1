@@ -42,7 +42,7 @@ export default function OtherServiceCard({ title, href = "#" }: OtherServiceCard
   return (
     <a href={href} className="group block perspective">
       <div className="flip-card-inner relative w-full h-[245px] md:h-[258px] lg:h-[286px]">
-        <div className="flip-card-front absolute inset-0 bg-[#0f2c4c] text-white flex flex-col items-center justify-center px-6">
+        <div className="flip-card-front absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6">
           <div className="mb-4">
             {pickIcon(title)}
           </div>
@@ -50,7 +50,7 @@ export default function OtherServiceCard({ title, href = "#" }: OtherServiceCard
             {title}
           </span>
         </div>
-        <div className="flip-card-back absolute inset-0 bg-[#0f2c4c] text-white flex flex-col items-center justify-center px-6">
+        <div className="flip-card-back absolute inset-0 bg-[#0c476b] text-white flex flex-col items-center justify-center px-6">
           <p className="text-center underline decoration-[#3b82f6]">{title}</p>
           <button className="border border-white text-white px-6 py-2 mt-6">Ver más</button>
         </div>
